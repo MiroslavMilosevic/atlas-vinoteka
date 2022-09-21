@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\GalerijaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,15 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {return view('pocetna');});
 Route::get('/pocetna', function () {return view('pocetna');});
 Route::get('/onama', function () {return view('onama');});
+Route::get('/kontakt', function () {return view('kontakt');});
+
 
 Route::get('/shop', function () {
     return redirect('/');
 });
-Route::get('/galerija', function () {
-    return redirect('/');
-});
-Route::get('/blog', function () {
-    return redirect('/');
-});
 
-Route::get('/kontakt', function () {return view('kontakt');});
+
+Route::get('/galerija', [GalerijaController::class, 'index']);
+
+Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog/{id}', [BlogController::class, 'show']);
+
+
