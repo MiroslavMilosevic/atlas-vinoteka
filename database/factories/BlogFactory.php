@@ -15,7 +15,7 @@ class BlogFactory extends Factory
     public function definition()
     {
         return [
-            'title'=> $this->faker->sentence(rand(1,4)),
+            'title'=> $this->faker->sentence(rand(2,4)),
             'text'=>$this->faker->paragraph(rand(5,15)),
             'img_url'=>$this->faker->imageUrl(640, 480, 'animals', true),
             //'should_end_at' => $this->faker->time('Y-m-d')
