@@ -1,0 +1,8 @@
+{
+    "tip": "Gin",
+    "regija": "Sumadija",
+    "alkohol": "6c",
+    "pakovanje": "12",
+    "zapremina": "569ml",
+    "kategorija": "spirit"
+}

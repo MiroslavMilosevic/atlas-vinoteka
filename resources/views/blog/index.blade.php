@@ -10,5 +10,15 @@
     
 
     <h1>Blog Page</h1>
+
+    @for ($i = 0; $i < 10; $i++)
+    {{-- {{print_r($blogs[$i])}} --}}
+   <a href={{'blog/' . $blogs[$i]['id']}}>
+     {{ $blogs[$i]['title'] }} --- {{$blogs[$i]['id']}}
+   </a>
+
+   <br>
+    @endfor
+
 </body>
 </html>

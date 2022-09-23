@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->boolean('is_on_discount')->default(false);
             $table->string('text', 2250)->nullable();
             $table->string('img_url', 500)->nullable();
+            $table->string('kategorija', 20);
             $table->json('additional_fields')->nullable();
     
         });
