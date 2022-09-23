@@ -11,5 +11,7 @@
     <h1>{{$one_blog['title']}}</h1>
     <img src={{$one_blog['img_url']}} alt="sdfasdf">
 
+
+
 </body>
 </html>

@@ -10,7 +10,16 @@ class BlogController extends Controller
 
     public function index()
     {
-        $blogs = Blog::all();
+        $limit = request('limit');
+        if( !is_numeric($limit) || $limit < 1){
+            $limit = 8;
+        }
+
+        $blogs = 
+        Blog::
+          take($limit)
+        ->orderBy('should_end_at', 'desc')
+        ->paginate(30);
 
         return view('blog.index', ['blogs'=>$blogs]);
     }
