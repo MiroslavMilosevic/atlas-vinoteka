@@ -8,5 +8,14 @@
 </head>
 <body>
     <h1>Shop stranica</h1>
+
+    @for ($i = 0; $i < count($products); $i++)
+    <a href={{'../shop/' . $products[$i]['id']}}>
+      {{ $products[$i]['title'] }} --- {{$products[$i]['price']}}
+    </a>
+    <br>
+     @endfor
+
+
 </body>
 </html>

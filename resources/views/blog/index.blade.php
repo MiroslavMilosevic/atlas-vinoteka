@@ -41,6 +41,9 @@
 
       if(!isNaN(page)){
           document.getElementById('next-page').addEventListener('click',()=>{
+              if(page <= 0){
+                page++;
+              }  
               page++;
               window.location.href =`../blog/?page=${page}`
           })
